@@ -1,0 +1,127 @@
+/* Загальні стилі */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f1f1;
+}
+
+/* Контейнер резюме */
+.resume-container {
+    display: flex;
+    max-width: 900px;
+    margin: 30px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Ліва колонка */
+.left-column {
+    background-color: #800020;
+    color: black; /* Основний текст чорний */
+    padding: 25px;
+    width: 35%;
+    text-align: center;
+}
+
+/* Основні заголовки в лівій колонці */
+.left-column h2 {
+    color: white; /* Білий колір заголовків */
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-bottom: 2px solid white; /* Лінія під заголовком */
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Фото */
+.profile-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 15px;
+}
+
+/* Текст у лівій колонці */
+.left-column p {
+    font-size: 15px;
+    margin: 6px 0;
+    font-weight: bold;
+    color: black; /* Чорний колір */
+    text-shadow: none; /* Забираємо розмиття */
+}
+
+/* Списки */
+.left-column ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.left-column ul li {
+    background: #a52a2a;
+    margin: 6px 0;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black; /* Чорний, чіткий текст */
+    text-shadow: none; /* Без розмиття */
+}
+
+/* Виділення заголовків "Особисті дані", "Інтереси", "Мови" білим кольором */
+.left-column h3 {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Права колонка */
+.right-column {
+    background-color: white;
+    padding: 25px;
+    width: 65%;
+}
+
+/* Заголовки у правій колонці */
+h1, h2, h3 {
+    color: #5a0018;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Playfair Display', serif;
+}
+
+/* Посилання */
+a {
+    color: #ffcccb;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Параграфи у правій колонці */
+.right-column p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Декоративні елементи */
+hr {
+    border: none;
+    height: 2px;
+    background-color: #800020;
+    margin: 15px 0;
+}
