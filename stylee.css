@@ -1,12 +1,45 @@
 /* Загальні стилі */
-body {
-    font-family: 'Poppins', sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
     background-color: #f8f1f1;
+    scroll-behavior: smooth;
 }
 
-/* Контейнер резюме */
+/* Навігація */
+.navbar {
+    background-color: #800020;
+    padding: 15px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #ffcccb;
+}
+
+/* Контейнер */
 .resume-container {
     display: flex;
     max-width: 900px;
@@ -14,50 +47,34 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     overflow: hidden;
+    background: linear-gradient(135deg, #f8f1f1, #fff);
+    min-height: 100vh;
 }
 
 /* Ліва колонка */
 .left-column {
     background-color: #800020;
-    color: black; /* Основний текст чорний */
+    color: white;
     padding: 25px;
     width: 35%;
     text-align: center;
 }
 
-/* Основні заголовки в лівій колонці */
-.left-column h2 {
-    color: white; /* Білий колір заголовків */
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-    padding: 5px 10px;
-    border-bottom: 2px solid white; /* Лінія під заголовком */
-    display: inline-block;
-    margin-bottom: 15px;
-}
-
-/* Фото */
 .profile-photo {
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 3px solid white;
     margin-bottom: 15px;
 }
 
-/* Текст у лівій колонці */
 .left-column p {
     font-size: 15px;
     margin: 6px 0;
     font-weight: bold;
-    color: black; /* Чорний колір */
-    text-shadow: none; /* Забираємо розмиття */
+    color: white;
 }
 
-/* Списки */
 .left-column ul {
     padding: 0;
     list-style-type: none;
@@ -69,11 +86,9 @@ body {
     padding: 8px;
     border-radius: 5px;
     font-weight: bold;
-    color: black; /* Чорний, чіткий текст */
-    text-shadow: none; /* Без розмиття */
+    color: white;
 }
 
-/* Виділення заголовків "Особисті дані", "Інтереси", "Мови" білим кольором */
 .left-column h3 {
     color: white;
     font-family: 'Playfair Display', serif;
@@ -81,7 +96,14 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.highlighted-name {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
 /* Права колонка */
@@ -91,14 +113,12 @@ body {
     width: 65%;
 }
 
-/* Заголовки у правій колонці */
 h1, h2, h3 {
     color: #5a0018;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
     font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* Посилання */
 a {
     color: #ffcccb;
     font-weight: bold;
@@ -111,17 +131,123 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Параграфи у правій колонці */
 .right-column p {
     font-size: 16px;
     line-height: 1.6;
     color: #333;
 }
 
-/* Декоративні елементи */
-hr {
-    border: none;
-    height: 2px;
+/* Портфоліо */
+.portfolio-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.portfolio-links li a {
+    display: block;
     background-color: #800020;
-    margin: 15px 0;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.portfolio-links li a:hover {
+    background-color: #a52a2a;
+}
+
+/* Footer */
+.basement {
+    background-color: #f2f2f2;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.icon {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #800020;
+    transition: color 0.3s ease-in-out;
+}
+
+.icon:hover {
+    color: #ffcccb;
+}
+
+/* Стиль для кнопок акордеону (ЛР і ПР) */
+.accordion {
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1em;
+    background-color: #800020; /* Бордовий фон */
+    color: white;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Активна або наведена кнопка */
+.accordion.active,
+.accordion:hover {
+    background-color: #a52a2a; /* Ніжно бордовий */
+}
+
+/* Контейнер відкритого вмісту */
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.panel a {
+    display: block;
+    margin: 8px 0;
+    color: #800020;
+    text-decoration: none;
+}
+
+.panel a:hover {
+    color: #a52a2a;
+}
+.icon_fb {
+    background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg');
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+}
+
+.icon_inst {
+    background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg');
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+}
+
+.icon_tw {
+    background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg');
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: cover;
 }
