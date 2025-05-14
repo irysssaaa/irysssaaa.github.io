@@ -1,0 +1,225 @@
+/* Основні стилі для всієї сторінки */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Raleway, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Стилі для меню */
+.menu {
+    height: 95px;
+    background-color: #38404B;
+}
+
+.menu ul {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    right: 17%;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu > a {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 17%;
+    font-size: 22px;
+    transform: translateY(-50%);
+    color: #80BEE9;
+    text-decoration: none;
+}
+
+.menu > a:link {
+    color: #80BEE9;
+    text-decoration: none;
+}
+
+.menu_btn {
+    box-sizing: content-box;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.menu_btn:link {
+    color: #B6B6B6;
+    text-decoration: none;
+}
+
+/* Стилі для заголовка */
+header .container {
+    background-image: url(../img/jumbotron.jpg);
+    height: 410px;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    position: relative;
+    top: 115px;
+    font-weight: 400;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+}
+
+/* Стилі для кнопки */
+.btn {
+    display: inline-block;
+    position: relative;
+    height: 60px;
+    width: 240px;
+    border-radius: 30px;
+    line-height: 60px;
+    top: 190px;
+}
+
+.btn:link {
+    color: white;
+    background-color: #FA5BA5;
+    text-decoration: none;
+}
+
+/* Загальні стилі для секцій */
+section {
+    min-height: 370px;
+    padding: 78px 0 70px;
+}
+
+h2 {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+/* Стилі для секції "Services" */
+.services {
+    height: 370px;
+    text-align: center;
+}
+
+.services .flexbox {
+    display: flex;
+    justify-content: space-between;
+    width: 965px;
+    margin: 0 auto;
+    color: #B6B6B6;
+    line-height: 26px;
+}
+
+.fa-solid {
+    font-size: 48px;
+}
+
+/* Стилі для секції "Blog" */
+.blog {
+    background-color: #FCFCFC;
+    height: 720px;
+}
+
+.blog .flexbox {
+    display: flex;
+    height: 510px;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 965px;
+    margin: 0 auto;
+}
+
+img {
+    display: inline-block;
+    height: 240px;
+    width: 280px;
+}
+
+.text {
+    display: inline-block;
+    vertical-align: 100px;
+    margin-left: 35px;
+}
+
+.text p {
+    font-size: 12px;
+    color: #B6B6B6;
+    margin-top: 20px;
+}
+
+/* Стилі для секції "About Us" */
+.about {
+    padding: 78px 0 70px;
+    min-height: 400px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 965px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    width: 50%;
+    text-align: left;
+    color: #555;
+    font-size: 14px;
+    line-height: 26px;
+    padding-right: 20px;
+}
+
+.about-image {
+    width: 45%;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Стилі для футера */
+footer {
+    height: 245px;
+    background-color: #38404B;
+    text-align: center;
+}
+
+.footer_menu > a {
+    display: inline-block;
+    font-size: 24px;
+    margin: 55px 0 35px;
+}
+
+.footer_menu > a {
+    color: #B3C1D4;
+    text-decoration: none;
+}
+
+.footer_menu li {
+    display: inline-block;
+}
+
+.footer_menu .menu_btn:link {
+    color: #B3C1D4;
+}
+
+footer p {
+    color: white;
+    font-size: 10px;
+    margin: 35px 0 40px;
+}

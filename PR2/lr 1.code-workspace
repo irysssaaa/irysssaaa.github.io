@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../lr 1"
+		},
+		{
+			"path": "../lr 2"
+		},
+		{
+			"path": "../lr 3"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "PR2"
+	}
+}
