@@ -251,3 +251,20 @@ a:hover {
     height: 32px;
     background-size: cover;
 }
+/* Списки у правій колонці */
+.right-column ul, .right-column ol {
+    margin: 10px 0 20px 20px;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.right-column li {
+    margin-bottom: 6px;
+}
+
+/* Вкладений список */
+.right-column ul ul, .right-column ol ul {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
