@@ -1,0 +1,182 @@
+/* style.css — оновлена версія */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #004080;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.header {
+  background-color: #002b5c;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  position: relative;
+}
+
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+}
+
+.favorites-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 2px solid #fff;
+  color: white;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.favorites-btn::before {
+  content: "\2665";
+  margin-right: 8px;
+  color: pink;
+  transition: color 0.3s ease;
+}
+
+.favorites-btn:hover {
+  background-color: white;
+  color: #002b5c;
+}
+
+.favorites-btn:hover::before {
+  color: red;
+}
+
+.main-content {
+  width: 85%;
+  margin: 30px auto;
+}
+
+.new-arrivals h2 {
+  color: #b3e5fc; /* світло-блакитний */
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.book-card {
+  background-color: #007acc; /* світліше синє */
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 15px;
+  width: calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 420px;
+}
+
+.book-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.25);
+}
+
+.book-card img {
+  max-width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.book-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #b3e5fc;
+  font-weight: 700;
+}
+
+.book-card p,
+.book-card span {
+  font-size: 0.9rem;
+  color: #e0f7fa;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 1024px) {
+  .book-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .book-card {
+    width: 100%;
+    border-radius: 16px;
+  }
+  .header h1 {
+    font-size: 1.6rem;
+  }
+}
+
+.footer {
+  background-color: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+.about-horizontal {
+  background-color: #003366;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.about-horizontal h2 {
+  font-family: 'Playfair Display', serif;
+  color: #b3e5fc;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.about-list-horizontal {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.about-list-horizontal li {
+  font-weight: 500;
+  color: #e0f7fa;
+  font-size: 1rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background-color: #005599;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.about-list-horizontal li:hover {
+  background-color: #006bb3;
+}
