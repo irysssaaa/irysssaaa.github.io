@@ -1,0 +1,263 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff; /* білий за замовчуванням */
+  z-index: 1000;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+header.scrolled {
+  background: #3c0069; /* темно-фіолетовий при скролі */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #000; /* чорний на білому */
+  transition: color 0.3s;
+}
+
+header.scrolled .logo {
+  color: #fff; /* білий на фіолетовому */
+}
+
+/* Navigation */
+.nav {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: #3c0069;
+  padding: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000; /* чорні на білому */
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+header.scrolled .nav a {
+  color: #fff; /* білі на фіолетовому */
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #ff6600;
+}
+
+/* Search */
+.search-box {
+  display: none;
+  position: relative;
+}
+
+.search-box input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: #f0f0f0;
+  color: #000;
+}
+
+.search-box button {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #000;
+}
+
+header.scrolled .search-box button {
+  color: #fff;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icons a {
+  font-size: 1.2rem;
+  color: #000; /* чорні на білому */
+  transition: color 0.3s;
+}
+
+header.scrolled .icons a {
+  color: #fff; /* білі на фіолетовому */
+}
+
+.icons a:hover {
+  color: #ff6600;
+}
+
+.icons a:nth-child(1):hover {
+  color: red;
+}
+
+/* Burger */
+.burger {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #000;
+}
+
+header.scrolled .burger {
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.hero-content h4 {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #bbb;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero-content h1 span {
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #fff;
+  color: #000;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #ff6600;
+  color: #fff;
+}
+
+/* Hero gallery */
+.hero-gallery {
+  position: relative;
+}
+
+.hero-gallery img {
+  display: block;
+  max-width: 350px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#main-img {
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.thumbnails {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.thumbnails img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, border 0.3s;
+}
+
+.thumbnails img:hover {
+  transform: scale(1.1);
+  border: 2px solid #ff6600;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    gap: 30px;
+    width: auto;
+    background: none;
+    padding: 0;
+  }
+  .search-box {
+    display: block;
+    margin: 0 20px;
+  }
+  .burger {
+    display: none;
+  }
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 150px 60px;
+  }
+  .hero-content {
+    flex: 1;
+  }
+  .hero-gallery {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .hero-gallery img {
+    max-width: 500px;
+  }
+}
