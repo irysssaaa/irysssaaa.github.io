@@ -1,69 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyber Store</title>
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Лабораторна 2 — Завдання 1</title>
 </head>
 <body>
+  <h1>Завдання 1: Область видимості (let)</h1>
+  <p>Відкрий консоль (F12 → Console), натисни кнопку.</p>
 
-  <!-- Header -->
-  <header id="header">
-    <div class="container">
-      <!-- Logo -->
-      <div class="logo">cyber</div>
+  <button id="run">Запустити calculate()</button>
 
-      <!-- Search -->
-      <div class="search-box">
-        <input type="text" placeholder="Search">
-        <button><i class="fas fa-search"></i></button>
-      </div>
-
-      <!-- Navigation -->
-      <nav class="nav" id="nav">
-        <a href="#" class="active">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Blog</a>
-      </nav>
-
-      <!-- Icons -->
-      <div class="icons">
-        <a href="#"><i class="fas fa-heart"></i></a>
-        <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        <a href="#"><i class="fas fa-user"></i></a>
-      </div>
-
-      <!-- Burger -->
-      <div class="burger" id="burger">
-        <i class="fas fa-bars"></i>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h4>Pro. Beyond.</h4>
-      <h1>iPhone 14 <span>Pro</span></h1>
-      <p>Created to change everything for the better. For everyone.</p>
-      <a href="#" class="btn">Shop Now</a>
-    </div>
-    <div class="hero-gallery">
-      <img id="main-img" src="images/iphone1.png" alt="iPhone">
-      <div class="thumbnails">
-        <img src="images/iphone1.png" alt="iPhone view 1" onclick="changeImage(this)">
-        <img src="images/iphone2.jpg" alt="iPhone view 2" onclick="changeImage(this)">
-        <img src="images/iphone3.jpg" alt="iPhone view 3" onclick="changeImage(this)">
-      </div>
-    </div>
-  </section>
-
-  <!-- Scripts -->
-  <script src="script.js"></script>
+  <!-- підключаємо JS -->
+  <script src="js.js" defer></script>
 </body>
 </html>
